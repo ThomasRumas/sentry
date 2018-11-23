@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test sentry</title>
+    <script src="https://cdn.ravenjs.com/3.26.2/raven.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <script>
+        Raven.config('http://1e79b52149ab4d7684aa651f2c15b337@10.16.182.77:9000/2').install(); 
+        for(var i = 0; i < 100; i++) {
+            var myElement = document.querySelector('.js-addToCart'); 
+            myElement.innerText = "Toto"; 
+        }
+    </script>
+</body>
+</html>
